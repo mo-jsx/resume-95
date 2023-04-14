@@ -1,8 +1,15 @@
+@use "./colors" as colors;
+
+@font-face {
+	font-family: "Windows Regular";
+	src: url("../assets//fonts/Windows\ Regular.ttf") format("truetype");
+}
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: "Windows Regular";
 }
 
 /* Remove default margin */
@@ -16,37 +23,37 @@ figure,
 blockquote,
 dl,
 dd {
-    margin: 0;
+	margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
-    list-style: none;
+	list-style: none;
 }
 
 /* Set core root defaults */
 html:focus-within {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-    text-decoration-skip-ink: auto;
+	text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-    max-width: 100%;
-    display: block;
+	max-width: 100%;
+	display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -54,21 +61,42 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+	font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
+	html:focus-within {
+		scroll-behavior: auto;
+	}
 
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+button {
+	padding: 0rem 0.2rem;
+	background: colors.$button-bg;
+	box-shadow: rgb(223, 223, 223) 1px 1px 0px 0px inset,
+		rgb(0, 0, 0) 1px 0px 0px 0px, rgb(0, 0, 0) 0px 1px 0px 0px,
+		rgb(0, 0, 0) 1px 1px 0px 0px;
+	border: 1px solid black;
+	border-top: 1px solid colors.$button-transparent-borders;
+	border-left: 1px solid colors.$button-transparent-borders;
+	border-radius: 0px;
+	font-size: 1rem;
+	line-height: 1.3rem;
+	text-align: start;
+	letter-spacing: -0.3px;
+	cursor: pointer;
+
+	&:hover {
+		background: lighten($color: colors.$button-bg, $amount: 10);
+	}
 }

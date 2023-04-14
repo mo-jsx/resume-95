@@ -1,0 +1,12 @@
+.btn {
+	display: flex;
+	flex-direction: row;
+
+	.label {
+		margin: auto 0.5rem;
+	}
+}
+
+.primary {
+	font-weight: 800;
+}

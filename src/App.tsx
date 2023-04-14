@@ -1,7 +1,14 @@
-import React from "react";
+import { Button } from "./components";
+import { Dock } from "./layouts";
+
+import "./app.scss";
 
 const App = () => {
-	return <div>App</div>;
+	return (
+		<div className="App">
+			<Dock />
+		</div>
+	);
 };
 
 export default App;

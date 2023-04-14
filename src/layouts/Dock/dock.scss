@@ -1,0 +1,9 @@
+@use "../../styles/colors" as colors;
+
+.dock {
+	grid-area: 12 / 1 / 13 / 13;
+	background-color: colors.$button-bg;
+
+	margin: 0;
+	padding: 2px;
+}
