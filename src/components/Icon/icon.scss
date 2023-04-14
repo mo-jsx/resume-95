@@ -1,0 +1,17 @@
+.icon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+
+	img,
+	p {
+		cursor: pointer;
+	}
+
+	p {
+		text-align: center;
+		color: white;
+	}
+}
