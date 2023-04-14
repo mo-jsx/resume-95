@@ -1,5 +1,5 @@
 import { Button } from "../../components";
-import Start from "../../assets/icons/start32.webp";
+import { Start } from "../../assets/icons/";
 import "./dock.scss";
 
 const Dock = () => {
