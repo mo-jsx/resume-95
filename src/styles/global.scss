@@ -79,24 +79,3 @@ select {
 		scroll-behavior: auto !important;
 	}
 }
-
-button {
-	padding: 0rem 0.2rem;
-	background: colors.$button-bg;
-	box-shadow: rgb(223, 223, 223) 1px 1px 0px 0px inset,
-		rgb(0, 0, 0) 1px 0px 0px 0px, rgb(0, 0, 0) 0px 1px 0px 0px,
-		rgb(0, 0, 0) 1px 1px 0px 0px;
-	border: 1px solid black;
-	border-top: 1px solid colors.$button-transparent-borders;
-	border-left: 1px solid colors.$button-transparent-borders;
-	border-radius: 0px;
-	font-size: 1rem;
-	line-height: 1.3rem;
-	text-align: start;
-	letter-spacing: -0.3px;
-	cursor: pointer;
-
-	&:hover {
-		background: lighten($color: colors.$button-bg, $amount: 10);
-	}
-}
