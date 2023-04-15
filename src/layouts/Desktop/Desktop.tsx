@@ -1,6 +1,6 @@
 import "./desktop.scss";
 import { Bin, Computer, Dir } from "../../assets/icons";
-import { Icon } from "../../components";
+import { FileManager, Icon } from "../../components";
 import { IconProps } from "types/";
 
 interface IconPlaceholder extends IconProps {
@@ -21,8 +21,9 @@ const Desktop = () => {
 					<div
 						className="iconi"
 						id={`icon${index + 1}`}
-						title={icon.title}>
-						<Icon label={icon.label} img={icon.img} key={index} />
+						title={icon.title}
+						key={index}>
+						<Icon label={icon.label} img={icon.img} />
 					</div>
 				))}
 			</div>
