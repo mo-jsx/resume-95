@@ -15,7 +15,7 @@ const controls: ControlProps[] = [
 const options = ["File", "Edit", "View", "Help"];
 
 const FileManager = (props: FileManagerProps) => {
-	const { name, icon, children } = props;
+	const { name, icon, children, updateState } = props;
 
 	return (
 		<div className="window">
@@ -27,7 +27,7 @@ const FileManager = (props: FileManagerProps) => {
 
 				<div className="right">
 					{controls.map((control, index) => (
-						<div className="control">
+						<div className="control" onClick={() => updateState()}>
 							<Button
 								label={control.label}
 								img={control.img}
