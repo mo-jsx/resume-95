@@ -84,29 +84,35 @@ const Desktop = () => {
 				))}
 
 				{computerState && (
-					<ComputerWindow
-						name={"My Computer"}
-						icon={Computer}
-						updateState={() => initIcons[1].updater(false)}
-						children={undefined}
-					/>
+					<div id="computerWindow">
+						<ComputerWindow
+							name={"My Computer"}
+							icon={Computer}
+							updateState={() => initIcons[1].updater(false)}
+							children={undefined}
+						/>
+					</div>
 				)}
 
 				{binState && (
-					<BinWindow
-						name={"Bin"}
-						icon={Bin}
-						updateState={() => initIcons[0].updater(false)}
-						children={undefined}
-					/>
+					<div id="binWindow">
+						<BinWindow
+							name={"Bin"}
+							icon={Bin}
+							updateState={() => initIcons[0].updater(false)}
+							children={undefined}
+						/>
+					</div>
 				)}
 				{dirState && (
-					<DirWindow
-						name={"Documents"}
-						icon={Dir}
-						updateState={() => initIcons[2].updater(false)}
-						children={undefined}
-					/>
+					<div id="dirWindow">
+						<DirWindow
+							name={"Documents"}
+							icon={Dir}
+							updateState={() => initIcons[2].updater(false)}
+							children={undefined}
+						/>
+					</div>
 				)}
 			</div>
 		</div>
