@@ -3,6 +3,7 @@ import Button from "../Button";
 import { Close } from "../../assets/icons";
 import "./fileManager.scss";
 import Draggable from "react-draggable";
+import React from "react";
 
 interface ControlProps extends ButtonProps {
 	title: string;
@@ -54,7 +55,8 @@ const FileManager = (props: FileManagerProps) => {
 				<div className="playground">{children}</div>
 				<div className="bar">
 					<p>
-						{children ? children.length : 0} object{"("}s{")"} found
+						{children ? React.Children.count(children) : 0} object
+						{"("}s{")"} found
 					</p>
 				</div>
 			</div>
