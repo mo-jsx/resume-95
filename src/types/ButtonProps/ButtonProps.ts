@@ -1,7 +1,8 @@
 interface ButtonProps {
-	label: string;
+	label?: string;
 	img?: string;
 	alt?: string;
+	title?: string;
 	variant: "normal" | "primary";
 }
 
