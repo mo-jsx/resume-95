@@ -79,3 +79,13 @@ select {
 		scroll-behavior: auto !important;
 	}
 }
+.box {
+	position: relative;
+	cursor: move;
+	color: black;
+	max-width: 100%;
+	border-radius: 0px;
+	padding: 0.5em;
+	margin: auto;
+	user-select: none;
+}
