@@ -55,7 +55,7 @@ const FileManager = (props: FileManagerProps) => {
 				<div className="playground">{children}</div>
 				<div className="bar">
 					<p>
-						{/* {children ? React.Children.count(children) : 0} object */}
+						{children ? React.Children.count(children) : 0} object
 						{"("}s{")"} found
 					</p>
 				</div>
