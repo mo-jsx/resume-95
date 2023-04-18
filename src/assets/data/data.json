@@ -1,0 +1,139 @@
+{
+    "experience": [
+        {
+            "role": "Frontend Engineer",
+            "company": "Pando Tech.",
+            "start": "June 2021",
+            "end": "Present",
+            "responsabilities": [
+                "Work in an agile team to consistently deliver and maintain new features and functionalities.",
+                "Translate features from requirements to functional stable components.",
+                "Build a fully-fledged component library using Storybook to improve consistency across the applications.",
+                "Develop REST APIs using ExpressJS and MongoDB to store data on AWS services.",
+                "Develop GraphQL APIs using Apollo to load data from the server to a client and reduce waterfall requests.",
+                "Maintain CI/CD pipelines using GitHub Actions.",
+                "Actively contribute to the design process and discuss the technical feasibility of the design.",
+                "Write and run automated tests to ensure the quality of the application.",
+                "Write end-to-end tests to simulate real user interactions with the application.",
+                "Document and review code."
+            ]
+        },
+        {
+            "role": "Full Stack JavaScript Developer",
+            "company": "Bear&Fork.",
+            "start": "Feb 2019",
+            "end": "Nov 2020",
+            "responsabilities": [
+                "Worked in close collaboration with a dedicated development and design team.",
+                "Built Chrome Browser Extensions to improve productivity for internal teams.",
+                "Contributed to B2B e-Commerce projects and developed RESTful APIs using ExpressJS.",
+                "Maintained and enhanced legacy code base.",
+                "Built websites and interfaces for social media campaigns.",
+                "Actively participated in regular planning and brainstorming meetings."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "university": "UMBB",
+            "degree": "-",
+            "location": "Boumerdes",
+            "field": "Computer Science",
+            "topics": [
+                "Algorithmics & Data Structures",
+                "Computer architecture",
+                "Databases",
+                "OOP",
+                "Calculus",
+                "Algebra",
+                "Topology",
+                "Geometry",
+                "Statistics",
+                "Probabilities",
+                "Physics"
+            ],
+            "start": "-",
+            "end": "-"
+        },
+        {
+            "university": "USTHB",
+            "degree": "Bachelor",
+            "location": "Algiers",
+            "field": "Petroleum Engineering",
+            "topics": "-"
+        }
+    ],
+    "skills": [
+        {
+            "programming": [
+                "JavaScript/TypeScript",
+                "Python"
+            ],
+            "frameworks": [
+                "React",
+                "Nextjs",
+                "Gatsbyjs",
+                "Vue",
+                "Vuex",
+                "Nodejs",
+                "ExpressJS",
+                "Django",
+                "Pug",
+                "Jinja"
+            ],
+            "css": [
+                "Sass",
+                "CSS Modules",
+                "styled-components",
+                "Material UI",
+                "GSAP",
+                "Bootstrap"
+            ],
+            "testing": [
+                "Jest",
+                "Testing-library",
+                "Cypress"
+            ],
+            "CMS": [
+                "Wordpress",
+                "Strapi"
+            ],
+            "Databases": [
+                "MySQL",
+                "PostgreSQL",
+                "MongoDB"
+            ],
+            "Cloud": [
+                "AWS EC2",
+                "AWS S3",
+                "AWS Cloudfront",
+                "AWS Route53",
+                "AtlasDB",
+                "PlanetScale"
+            ],
+            "BaaS": [
+                "Firebase",
+                "Supabase"
+            ],
+            "Tools": [
+                "Webpack",
+                "Babel",
+                "Vite",
+                "Git",
+                "ESLint",
+                "Turbopack",
+                "Storybook",
+                "Postman",
+                "Apollo",
+                "Figma"
+            ],
+            "Libraries": [
+                "RxJS",
+                "Lodash",
+                "Ramda",
+                "Cheerio",
+                "Selenium"
+            ]
+        }
+    ]
+}
