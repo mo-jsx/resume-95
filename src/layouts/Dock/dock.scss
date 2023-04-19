@@ -6,4 +6,18 @@
 
 	margin: 0;
 	padding: 2px;
+
+	.navbar {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+
+		.openTabs {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+
+			margin-left: 10px;
+		}
+	}
 }
