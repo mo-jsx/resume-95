@@ -1,6 +1,12 @@
 @use "../../styles/colors" as colors;
 
 .window {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 30;
+	transform: translate(50%, 30%);
+
 	width: 40%;
 	height: 60%;
 	background-color: colors.$button-bg;

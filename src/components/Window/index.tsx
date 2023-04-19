@@ -1,26 +1,44 @@
-import { FileManagerProps, ButtonProps } from "types/";
+import React from "react";
+import Draggable from "react-draggable";
 import Button from "../Button";
+import { WindowProps, ButtonProps } from "types/";
 import { Close } from "../../assets/icons";
 import "./fileManager.scss";
-import Draggable from "react-draggable";
-import React from "react";
+import ProcessManager from "../../store";
 
 interface ControlProps extends ButtonProps {
 	title: string;
+	state: (id: string) => void;
 }
-
-const controls: ControlProps[] = [
-	{ variant: "primary", img: Close, title: "Close window" },
-];
 
 const options = ["File", "Edit", "View", "Help"];
 
-const FileManager = (props: FileManagerProps) => {
-	const { name, icon, children, updateState } = props;
+const Window = (props: WindowProps) => {
+	const { name, icon, children, id } = props;
+	let { isFocused, isMinimized, isOpened } = props;
+
+	const { closeWindow } = ProcessManager((state) => ({
+		closeWindow: state.killProcess,
+	}));
+
+	const controls: ControlProps[] = [
+		{
+			variant: "primary",
+			img: Close,
+			title: "Close window",
+			state: (id: string) => closeWindow(id),
+		},
+	];
 
 	return (
 		<Draggable handle="#handle">
-			<div className="window">
+			<div
+				className="window"
+				style={{
+					zIndex: `${isFocused ? 1000 : 1}`,
+					display: `${isMinimized ? "hidden" : "block"}`,
+				}}
+				onClick={() => (isFocused = true)}>
 				<div className="firstRow" id="handle">
 					<div className="left">
 						<img src={icon} alt={`${name} icon`} />
@@ -31,12 +49,12 @@ const FileManager = (props: FileManagerProps) => {
 						{controls.map((control, index) => (
 							<div
 								className="control"
-								onClick={() => updateState()}>
+								onClick={() => control.state(id)}
+								key={index}>
 								<Button
 									label={control.label}
 									img={control.img}
 									variant={"primary"}
-									key={index}
 									title={control.title}
 								/>
 							</div>
@@ -64,4 +82,4 @@ const FileManager = (props: FileManagerProps) => {
 	);
 };
 
-export default FileManager;
+export default Window;
