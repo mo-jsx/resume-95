@@ -26,33 +26,5 @@
 		#icon3 {
 			grid-area: 3 / 1 / 4 / 2;
 		}
-
-		#computerWindow {
-			.window {
-				position: absolute;
-				z-index: 2;
-				top: 0;
-				left: 0;
-				transform: translate(50%, 30%);
-			}
-		}
-		#binWindow {
-			.window {
-				position: absolute;
-				z-index: 2;
-				top: 0;
-				left: 0;
-				transform: translate(60%, 25%);
-			}
-		}
-		#dirWindow {
-			.window {
-				position: absolute;
-				z-index: 2;
-				top: 0;
-				left: 0;
-				transform: translate(70%, 20%);
-			}
-		}
 	}
 }
