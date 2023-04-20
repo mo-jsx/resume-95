@@ -5,6 +5,7 @@ interface WindowProps {
 	isOpened: boolean;
 	isFocused: boolean;
 	isMinimized: boolean;
+	isMaximized?: boolean;
 	children?: React.ReactNode;
 }
 
