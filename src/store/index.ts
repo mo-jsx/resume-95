@@ -8,6 +8,7 @@ interface ProcessManagerProps {
 	killProcess: (id: string) => void;
 	maximize: (id: string, newState: boolean) => void;
 	minimize: (id: string, newState: boolean) => void;
+	setFocus: (id: string) => void;
 }
 
 const ProcessManager = create<ProcessManagerProps>()((set, get) => ({
@@ -35,6 +36,16 @@ const ProcessManager = create<ProcessManagerProps>()((set, get) => ({
 			window.id === id ? { ...window, isMinimized: newState } : window
 		);
 		set({ openWindows: updatedWindows });
+	},
+	setFocus: (id) => {
+		set((state) => ({
+			openWindows: state.openWindows.map((window) => {
+				return {
+					...window,
+					isFocused: window.id === id,
+				};
+			}),
+		}));
 	},
 }));
 
