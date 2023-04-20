@@ -38,6 +38,7 @@ const Desktop = () => {
 							isOpened={openWindow.isOpened}
 							isFocused={openWindow.isFocused}
 							isMinimized={openWindow.isMinimized}
+							isMaximized={openWindow.isMaximized}
 						/>
 					</div>
 				))}
