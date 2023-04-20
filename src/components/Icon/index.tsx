@@ -13,8 +13,9 @@ import "./icon.scss";
 
 const Icon = (props: IconProps) => {
 	const { label, img, variant } = props;
-	const { createProcess } = ProcessManager((state) => ({
+	const { createProcess, setFocus } = ProcessManager((state) => ({
 		createProcess: state.createProcess,
+		setFocus: state.setFocus,
 	}));
 
 	const newWindow: WindowProps = {
@@ -31,7 +32,10 @@ const Icon = (props: IconProps) => {
 		<Draggable>
 			<div
 				className="icon box"
-				onDoubleClick={() => createProcess(newWindow)}>
+				onDoubleClick={() => {
+					createProcess(newWindow);
+					setFocus(newWindow.id);
+				}}>
 				<img src={img} alt={`${img} logo`} unselectable="on" />
 				<p className={`${variant}`}>{label}</p>
 			</div>
