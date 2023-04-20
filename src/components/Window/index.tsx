@@ -27,13 +27,13 @@ const Window = (props: WindowProps) => {
 	const { name, icon, children, id } = props;
 	let { isFocused, isMinimized, isMaximized, isOpened } = props;
 
-	const { closeWindow, maximizeWindow, minimizeWindow } = ProcessManager(
-		(state) => ({
+	const { closeWindow, maximizeWindow, minimizeWindow, setFocus } =
+		ProcessManager((state) => ({
 			closeWindow: state.killProcess,
 			maximizeWindow: state.maximize,
 			minimizeWindow: state.minimize,
-		})
-	);
+			setFocus: state.setFocus,
+		}));
 
 	const controls: ControlProps[] = [
 		{
@@ -62,11 +62,21 @@ const Window = (props: WindowProps) => {
 					display: isMinimized ? "none" : "block",
 					width: isMaximized ? "100%" : "40%",
 					height: isMaximized ? "100%" : "65%",
-					top: isMaximized ? 0 : 30,
-					left: isMaximized ? 0 : 30,
+					backgroundColor: isFocused ? "#c6c6c6" : "#eee",
+					top: isMaximized
+						? 0
+						: `${(Math.random() * 1000).toFixed()}`,
+					left: isMaximized
+						? 0
+						: `${(Math.random() * 1000).toFixed()}`,
 				}}
-				onClick={() => (isFocused = true)}>
-				<div className="firstRow" id="handle">
+				onClick={() => setFocus(id)}>
+				<div
+					className="firstRow"
+					id="handle"
+					style={{
+						backgroundColor: isFocused ? "#000080" : "#c6c6c6",
+					}}>
 					<div className="left">
 						<img src={icon} alt={`${name} icon`} />
 						<h4>{name}</h4>
