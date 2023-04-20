@@ -3,13 +3,8 @@
 .window {
 	position: absolute;
 	z-index: 2;
-	top: 0;
-	left: 30;
-	transform: translate(50%, 30%);
-
-	width: 40%;
-	height: 60%;
 	background-color: colors.$button-bg;
+	transition: width 0.2s, height 0.2s;
 
 	#handle {
 		cursor: move;
@@ -34,8 +29,10 @@
 		}
 
 		.left {
+			margin: 2px 5px;
+
 			h4 {
-				margin: 2px 5px;
+				margin: 0px 5px;
 				color: white;
 			}
 		}
@@ -44,7 +41,7 @@
 			.control {
 				width: 100%;
 				height: 100%;
-				margin: 0px;
+				margin: 2px;
 
 				img {
 					width: 1.1rem;
@@ -77,7 +74,6 @@
 	.playground {
 		background-color: white;
 		box-shadow: rgb(128, 128, 128) 1px 1px 0px 0px inset;
-		height: 84%;
 		margin: 0px 10px;
 		padding: 10px;
 		display: flex;
