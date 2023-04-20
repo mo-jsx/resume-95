@@ -1,32 +1,55 @@
+// MODULES
 import React from "react";
 import Draggable from "react-draggable";
-import Button from "../Button";
-import { WindowProps, ButtonProps } from "types/";
-import { Close } from "../../assets/icons";
-import "./fileManager.scss";
+
+// LAYOUTS & COMPONENTS
+import Control from "../Button/Controls";
+
+// STORE
 import ProcessManager from "../../store";
 
-interface ControlProps extends ButtonProps {
+// TYPES
+import { WindowProps } from "types/";
+
+// ASSETS
+import { Close, Maximize, Mini } from "../../assets/icons";
+import "./fileManager.scss";
+
+interface ControlProps {
+	img: string;
 	title: string;
-	state: (id: string) => void;
+	state: (id: any) => void;
 }
 
 const options = ["File", "Edit", "View", "Help"];
 
 const Window = (props: WindowProps) => {
 	const { name, icon, children, id } = props;
-	let { isFocused, isMinimized, isOpened } = props;
+	let { isFocused, isMinimized, isMaximized, isOpened } = props;
 
-	const { closeWindow } = ProcessManager((state) => ({
-		closeWindow: state.killProcess,
-	}));
+	const { closeWindow, maximizeWindow, minimizeWindow } = ProcessManager(
+		(state) => ({
+			closeWindow: state.killProcess,
+			maximizeWindow: state.maximize,
+			minimizeWindow: state.minimize,
+		})
+	);
 
 	const controls: ControlProps[] = [
 		{
-			variant: "primary",
+			img: Mini,
+			title: "Minimize window",
+			state: () => minimizeWindow(id, !isMinimized),
+		},
+		{
+			img: Maximize,
+			title: "Maximize window",
+			state: (id) => maximizeWindow(id, !isMaximized),
+		},
+		{
 			img: Close,
 			title: "Close window",
-			state: (id: string) => closeWindow(id),
+			state: (id) => closeWindow(id),
 		},
 	];
 
@@ -35,8 +58,12 @@ const Window = (props: WindowProps) => {
 			<div
 				className="window"
 				style={{
-					zIndex: `${isFocused ? 1000 : 1}`,
-					display: `${isMinimized ? "hidden" : "block"}`,
+					zIndex: isFocused ? 1000 : 1,
+					display: isMinimized ? "none" : "block",
+					width: isMaximized ? "100%" : "40%",
+					height: isMaximized ? "100%" : "65%",
+					top: isMaximized ? 0 : 30,
+					left: isMaximized ? 0 : 30,
 				}}
 				onClick={() => (isFocused = true)}>
 				<div className="firstRow" id="handle">
@@ -51,10 +78,8 @@ const Window = (props: WindowProps) => {
 								className="control"
 								onClick={() => control.state(id)}
 								key={index}>
-								<Button
-									label={control.label}
+								<Control
 									img={control.img}
-									variant={"primary"}
 									title={control.title}
 								/>
 							</div>
@@ -70,7 +95,11 @@ const Window = (props: WindowProps) => {
 					</ul>
 				</div>
 
-				<div className="playground">{children}</div>
+				<div
+					className="playground"
+					style={{ height: isMaximized ? "89% " : "84%" }}>
+					{children}
+				</div>
 				<div className="bar">
 					<p>
 						{children ? React.Children.count(children) : 0} object
