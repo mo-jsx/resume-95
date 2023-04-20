@@ -3,6 +3,7 @@
 .dock {
 	grid-area: 2 / 1 / 3 / 2;
 	background-color: colors.$button-bg;
+	border-top: 2px solid black;
 
 	margin: 0;
 	padding: 2px;
