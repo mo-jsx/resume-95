@@ -24,6 +24,7 @@ const Icon = (props: IconProps) => {
 		isOpened: true,
 		isFocused: true,
 		isMinimized: false,
+		isMaximized: false,
 	};
 
 	return (
