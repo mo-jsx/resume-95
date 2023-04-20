@@ -8,8 +8,6 @@ const Dock = () => {
 		openedWindows: state.openWindows,
 	}));
 
-	console.log("Dock", openedWindows);
-
 	return (
 		<div className="dock">
 			<div className="navbar">
