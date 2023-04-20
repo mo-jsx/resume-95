@@ -11,11 +11,6 @@ const Button = (props: ButtonProps) => {
 					<span className="label">{label}</span>
 				</button>
 			)}
-			{img && !label && (
-				<button className={`btn ${variant}`}>
-					<img src={img} alt={`${img} icon`} />
-				</button>
-			)}
 			{!img && label && (
 				<button className={`btn ${variant}`}>{label}</button>
 			)}
