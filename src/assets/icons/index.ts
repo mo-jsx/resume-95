@@ -5,3 +5,5 @@ export { default as Start } from "./start32.webp";
 export { default as Close } from "./close.png";
 export { default as Maximize } from "./maximize.png";
 export { default as Mini } from "./mini.png";
+export { default as File } from "./file.png";
+export { default as Printer } from "./printer.png";
