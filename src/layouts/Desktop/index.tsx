@@ -30,7 +30,7 @@ const Desktop = () => {
 
 				<div id="icon4">
 					<Icon
-						label={"My resume"}
+						label={"My resume.pdf"}
 						img={File}
 						children={<Resume />}
 					/>

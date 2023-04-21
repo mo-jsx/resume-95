@@ -22,7 +22,7 @@ const Resume = () => {
 					alignContent: "center",
 					width: "auto",
 				}}>
-				<h3>Print Resume</h3>
+				<h3>Download Resume</h3>
 				<img
 					src={Printer}
 					alt="Printer icon"
