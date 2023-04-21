@@ -2,6 +2,7 @@ import { Button } from "../../components";
 import { Start } from "../../assets/icons";
 import "./dock.scss";
 import ProcessManager from "../../store";
+import Tab from "../../components/Button/Tab";
 
 const Dock = () => {
 	const { openedWindows } = ProcessManager((state) => ({
@@ -21,12 +22,12 @@ const Dock = () => {
 				<div className="openTabs">
 					{openedWindows.map((tab) => (
 						<div key={tab.id}>
-							<Button
-								variant={"normal"}
-								label={tab.name}
-								img={tab.icon}
-								alt={tab.name}
-								title={tab.name}
+							<Tab
+								name={tab.name}
+								icon={tab.icon}
+								id={tab.id}
+								isFocused={false}
+								isMinimized={false}
 							/>
 						</div>
 					))}
