@@ -2,10 +2,10 @@
 import ProcessManager from "../../store";
 
 // LAYOUTS & COMPONENTS
-import { Icon, Window } from "../../components";
+import { Icon, Window, Resume } from "../../components";
 
 // ASSETS
-import { Bin, Computer, Dir } from "../../assets/icons";
+import { Bin, Computer, Dir, File } from "../../assets/icons";
 import "./desktop.scss";
 
 const Desktop = () => {
@@ -28,12 +28,20 @@ const Desktop = () => {
 					<Icon label={"Documents"} img={Dir} />
 				</div>
 
+				<div id="icon4">
+					<Icon
+						label={"My resume"}
+						img={File}
+						children={<Resume />}
+					/>
+				</div>
+
 				{processes?.map((openWindow) => (
 					<div key={openWindow.id}>
 						<Window
 							name={openWindow.name}
 							icon={openWindow.icon}
-							children={undefined}
+							children={openWindow.children}
 							id={openWindow.id}
 							isOpened={openWindow.isOpened}
 							isFocused={openWindow.isFocused}
