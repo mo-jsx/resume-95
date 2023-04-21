@@ -12,7 +12,7 @@ import { IconProps, WindowProps } from "types/";
 import "./icon.scss";
 
 const Icon = (props: IconProps) => {
-	const { label, img, variant, children } = props;
+	const { label, img, variant = "white", children } = props;
 	const { createProcess, setFocus } = ProcessManager((state) => ({
 		createProcess: state.createProcess,
 		setFocus: state.setFocus,
@@ -38,7 +38,7 @@ const Icon = (props: IconProps) => {
 					setFocus(newWindow.id);
 				}}>
 				<img src={img} alt={`${img} logo`} unselectable="on" />
-				<p className={`${variant}`}>{label}</p>
+				<p className={`text-${variant}`}>{label}</p>
 			</div>
 		</Draggable>
 	);
