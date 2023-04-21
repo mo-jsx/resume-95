@@ -60,8 +60,8 @@ const Window = (props: WindowProps) => {
 				style={{
 					zIndex: isFocused ? 1000 : 1,
 					display: isMinimized ? "none" : "block",
-					width: isMaximized ? "100%" : "40%",
-					height: isMaximized ? "100%" : "65%",
+					width: isMaximized ? "100%" : "",
+					height: isMaximized ? "100%" : "",
 					backgroundColor: isFocused ? "#c6c6c6" : "#eee",
 					top: isMaximized
 						? 0
