@@ -12,7 +12,7 @@ import { IconProps, WindowProps } from "types/";
 import "./icon.scss";
 
 const Icon = (props: IconProps) => {
-	const { label, img, variant } = props;
+	const { label, img, variant, children } = props;
 	const { createProcess, setFocus } = ProcessManager((state) => ({
 		createProcess: state.createProcess,
 		setFocus: state.setFocus,
@@ -26,6 +26,7 @@ const Icon = (props: IconProps) => {
 		isFocused: true,
 		isMinimized: false,
 		isMaximized: false,
+		children: children,
 	};
 
 	return (
