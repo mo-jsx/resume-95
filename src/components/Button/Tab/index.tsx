@@ -1,5 +1,5 @@
-import React from "react";
-import { WindowProps } from "types/";
+import ProcessManager from "../../../store";
+import "./tab.scss";
 
 interface TabProps {
 	name: string;
@@ -10,10 +10,21 @@ interface TabProps {
 }
 
 const Tab = (props: TabProps) => {
-	const { name, icon, id, isFocused, isMinimized } = props;
+	const { name, icon, id } = props;
+
+	const { minimizeWindow, openWindows } = ProcessManager((state) => ({
+		minimizeWindow: state.minimize,
+		openWindows: state.openWindows,
+	}));
+
+	const thisWindow = openWindows.find((window) => window.id === id);
 
 	return (
-		<button className={`btn ${isFocused && "focused"}`}>
+		<button
+			className={`${thisWindow?.isFocused ? "btn focused" : "btn"}`}
+			onClick={() => {
+				minimizeWindow(id, !thisWindow?.isFocused);
+			}}>
 			<img src={icon} alt={`${icon} icon`} />
 			<span className="label">{name}</span>
 		</button>
