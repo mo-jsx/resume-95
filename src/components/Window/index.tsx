@@ -39,7 +39,7 @@ const Window = (props: WindowProps) => {
 		{
 			img: Mini,
 			title: "Minimize window",
-			state: () => minimizeWindow(id, !isMinimized),
+			state: (id) => minimizeWindow(id, !isMinimized),
 		},
 		{
 			img: Maximize,
