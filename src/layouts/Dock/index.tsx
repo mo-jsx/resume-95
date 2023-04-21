@@ -11,27 +11,32 @@ const Dock = () => {
 
 	return (
 		<div className="dock">
-			<div className="navbar">
-				<Button
-					label="Start"
-					img={Start}
-					alt="Start Button"
-					variant="primary"
-				/>
+			<div className="nav">
+				<div className="navbar">
+					<Button
+						label="Start"
+						img={Start}
+						alt="Start Button"
+						variant="primary"
+					/>
 
-				<div className="openTabs">
-					{openedWindows.map((tab) => (
-						<div key={tab.id}>
-							<Tab
-								name={tab.name}
-								icon={tab.icon}
-								id={tab.id}
-								isFocused={false}
-								isMinimized={false}
-							/>
-						</div>
-					))}
+					<div className="openTabs">
+						{openedWindows.map((tab) => (
+							<div key={tab.id}>
+								<Tab
+									name={tab.name}
+									icon={tab.icon}
+									id={tab.id}
+									isFocused={false}
+									isMinimized={false}
+								/>
+							</div>
+						))}
+					</div>
 				</div>
+				<a href="https://mojsx.gtsb.io" target="_blank">
+					<Button label={"Made w/ ❤️️ by mojsx"} variant={"normal"} />
+				</a>
 			</div>
 		</div>
 	);

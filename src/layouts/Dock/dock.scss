@@ -8,17 +8,26 @@
 	margin: 0;
 	padding: 2px;
 
-	.navbar {
+	.nav {
 		display: flex;
 		flex-direction: row;
-		justify-content: flex-start;
+		justify-content: space-between;
 
-		.openTabs {
+		.navbar {
 			display: flex;
 			flex-direction: row;
 			justify-content: flex-start;
 
-			margin-left: 10px;
+			.openTabs {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+
+				margin-left: 10px;
+
+				position: relative;
+				overflow: hidden;
+			}
 		}
 	}
 }
