@@ -1,4 +1,5 @@
 @use "../../styles/colors" as colors;
+@use "../../styles/viewport" as size;
 
 .desktop {
 	grid-area: 1 / 1 / 2 / 2;
@@ -10,6 +11,33 @@
 		grid-template-columns: repeat(12, 1fr);
 		grid-template-rows: repeat(10, 1fr);
 		grid-gap: 0.5rem;
+
+		@media screen and (max-width: size.$xl) {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: repeat(8, 1fr);
+		}
+		@media screen and (max-width: size.$l) {
+			display: grid;
+			grid-template-columns: repeat(10, 1fr);
+			grid-template-rows: repeat(8, 1fr);
+		}
+		@media screen and (max-width: size.$m) {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: repeat(8, 1fr);
+		}
+		@media screen and (max-width: size.$s) {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(7, 1fr);
+		}
+		@media screen and (max-width: size.$xs) {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(5, 1fr);
+		}
+
 		align-content: space-evenly;
 		overflow: hidden;
 		position: relative;
