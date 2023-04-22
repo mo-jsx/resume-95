@@ -5,6 +5,10 @@
 	align-items: center;
 	margin: 10px;
 
+	&:hover {
+		background-color: rgba(220, 220, 220, 0.2);
+	}
+
 	img,
 	p {
 		cursor: pointer;
