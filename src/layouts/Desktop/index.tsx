@@ -2,7 +2,14 @@
 import ProcessManager from "../../store";
 
 // LAYOUTS & COMPONENTS
-import { Icon, Window, Resume, Contact, Projects } from "../../components";
+import {
+	Icon,
+	Window,
+	Resume,
+	Contact,
+	Projects,
+	AboutMe,
+} from "../../components";
 
 // ASSETS
 import { Bin, Computer, Dir, File, Me } from "../../assets/icons";
@@ -42,7 +49,7 @@ const Desktop = () => {
 		{
 			label: "About me",
 			img: Me,
-			children: undefined,
+			children: <AboutMe />,
 		},
 	];
 
