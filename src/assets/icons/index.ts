@@ -13,3 +13,4 @@ export { default as Email } from "./email.png";
 export { default as Write } from "./write.png";
 export { default as Larsson } from "./larsson.png";
 export { default as Toothist } from "./toothist.png";
+export { default as Me } from "./me.png";
