@@ -5,20 +5,24 @@ import ProcessManager from "../../store";
 import Tab from "../../components/Button/Tab";
 
 const Dock = () => {
-	const { openedWindows } = ProcessManager((state) => ({
+	const { openedWindows, isStart, setIsStart } = ProcessManager((state) => ({
 		openedWindows: state.openWindows,
+		isStart: state.isStart,
+		setIsStart: state.setIsStart,
 	}));
 
 	return (
 		<div className="dock">
 			<div className="nav">
 				<div className="navbar">
-					<Button
-						label="Start"
-						img={Start}
-						alt="Start Button"
-						variant="primary"
-					/>
+					<span onClick={() => setIsStart(!isStart)}>
+						<Button
+							label="Start"
+							img={Start}
+							alt="Start Button"
+							variant="primary"
+						/>
+					</span>
 
 					<div className="openTabs">
 						{openedWindows.map((tab) => (
