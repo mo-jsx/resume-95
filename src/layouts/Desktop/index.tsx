@@ -9,6 +9,7 @@ import {
 	Contact,
 	Projects,
 	AboutMe,
+	Menu,
 } from "../../components";
 
 // ASSETS
@@ -16,8 +17,10 @@ import { Bin, Computer, Dir, File, Me } from "../../assets/icons";
 import "./desktop.scss";
 
 const Desktop = () => {
-	const { processes } = ProcessManager((state) => ({
+	const { processes, isStart, setIsStart } = ProcessManager((state) => ({
 		processes: state.openWindows,
+		isStart: state.isStart,
+		setIsStart: state.setIsStart,
 	}));
 
 	const DeskIcons = [
@@ -55,7 +58,7 @@ const Desktop = () => {
 
 	return (
 		<div className="desktop">
-			<div className="space">
+			<div className="space" onClick={() => isStart && setIsStart(false)}>
 				{DeskIcons.map((icon, index) => (
 					<div id={`icon${index + 1}`}>
 						<Icon
@@ -80,6 +83,8 @@ const Desktop = () => {
 						/>
 					</div>
 				))}
+
+				<Menu />
 			</div>
 		</div>
 	);
