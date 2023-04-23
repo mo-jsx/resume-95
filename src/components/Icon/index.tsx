@@ -1,5 +1,6 @@
 // MODULES
 import Draggable from "react-draggable";
+import ReactGA from "react-ga";
 import cuid from "cuid";
 
 // STORE
@@ -33,9 +34,16 @@ const Icon = (props: IconProps) => {
 		<Draggable>
 			<div
 				className="icon box"
+				title="Double Click to open"
 				onDoubleClick={() => {
 					createProcess(newWindow);
 					setFocus(newWindow.id);
+					ReactGA.event({
+						category: label,
+						action: `click on ${label}`,
+						label: "Icon click",
+						value: 1,
+					});
 				}}>
 				<img src={img} alt={`${img} logo`} unselectable="on" />
 				<p className={`text-${variant}`}>{label}</p>
