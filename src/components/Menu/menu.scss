@@ -1,0 +1,77 @@
+@use "../../styles/colors" as colors;
+
+.menu {
+	grid-area: 7 / 1 / 11 / 3;
+	width: 100%;
+	height: 100%;
+
+	z-index: 2;
+
+	background-color: colors.$button-bg;
+
+	.menuSpace {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+
+		.banner {
+			background-color: colors.$bg-menu;
+			height: 100px;
+			width: 50px;
+
+			img {
+				position: absolute;
+				bottom: 0;
+			}
+		}
+
+		.menuList {
+			height: 100%;
+			width: 100%;
+
+			ul {
+				list-style: none;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				padding: 15px 0px 0px 0px;
+				margin: 0;
+
+				a {
+					text-decoration: none;
+					border-bottom: 1px solid colors.$button-shadow;
+					line-height: 1rem;
+
+					&:visited {
+						color: blue;
+					}
+					&:hover {
+						background-color: lighten(
+							$color: colors.$button-bg,
+							$amount: 10
+						);
+					}
+
+					&:last-child {
+						border-bottom: none;
+					}
+					li {
+						display: flex;
+						flex-direction: row;
+						justify-content: flex-start;
+						margin: 15px;
+						padding-bottom: 16px;
+						height: 32px;
+
+						img {
+							align-self: center;
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
