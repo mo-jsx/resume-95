@@ -9,10 +9,14 @@ interface ProcessManagerProps {
 	maximize: (id: string, newState: boolean) => void;
 	minimize: (id: string, newState: boolean) => void;
 	setFocus: (id: string) => void;
+
+	isStart: boolean;
+	setIsStart: (state: boolean) => void;
 }
 
 const ProcessManager = create<ProcessManagerProps>()((set, get) => ({
 	openWindows: [],
+	isStart: false,
 
 	createProcess: (newWindow) => {
 		set((state) => ({ openWindows: state.openWindows.concat(newWindow) }));
@@ -45,6 +49,12 @@ const ProcessManager = create<ProcessManagerProps>()((set, get) => ({
 					isFocused: window.id === id,
 				};
 			}),
+		}));
+	},
+
+	setIsStart: (id) => {
+		set(() => ({
+			isStart: id,
 		}));
 	},
 }));
