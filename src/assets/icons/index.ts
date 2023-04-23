@@ -14,3 +14,6 @@ export { default as Write } from "./write.png";
 export { default as Larsson } from "./larsson.png";
 export { default as Toothist } from "./toothist.png";
 export { default as Me } from "./me.png";
+export { default as Win95 } from "./win95.png";
+export { default as Explorer } from "./explorer.png";
+export { default as Medium } from "./medium.png";
