@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { inject } from "@vercel/analytics";
+import { Analytics } from "@vercel/analytics/react";
 import "./styles/global.scss";
 
-inject();
-
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-	<App />
+	<>
+		<App />
+		<Analytics />
+	</>
 );
