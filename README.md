@@ -20,7 +20,7 @@
 
 ## How did you manage the state of the application
 
--   I used zustand, as its my new favorite pet 🐻, for its simplicity and 0-hassle 0-boilerplate code to setup a flux architecture.
+-   I used zustand as my new favourite teddy bear. For its simplicity and 0-hassle 0-boilerplate code to set up a flux architecture.
 -   I came to the conclusion that the most appropriate architecture for this project was quite simple and would be as follows:
     ![Project Architecture](./Architecture.png) > Where every window added to the DOM, creates a process object in the Process Manger aka the store.
 
