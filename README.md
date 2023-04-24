@@ -32,9 +32,9 @@
 
 -   I developed this application in my spare time for about 1 week. I had the opportunity to work on several projects with similar logic, so I spent most of my time doing CSS stuff.
 
-## Do you plan any improvments ?
+## Are you planning any new features/improvements?
 
--   Yes! Besides refactoring and optimizing the application, I want to make this my pet project, where I can have fun trying new things and show off my latest work.
+- Yes, there are! Besides refactoring and optimizing the application, I want to make this my pet project, where I can have fun trying new things and show off my latest work.
 
 # Project Setup
 
