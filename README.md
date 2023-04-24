@@ -6,10 +6,10 @@
 
 ## Frameworks & Libraries used
 
--   ⚛️ React
--   🐻 Zustand
--   🖌️ Sass
--   👋 Draggable
+-   ⚛️ [React](https://react.dev)
+-   🐻 [Zustand](https://zustand-demo.pmnd.rs)
+-   🖌️ [Sass](https://sass-lang.com)
+-   👋 [Draggable](https://github.com/react-grid-layout/react-draggable)
 
 # FAQ
 
