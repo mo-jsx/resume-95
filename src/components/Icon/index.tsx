@@ -19,6 +19,8 @@ const Icon = (props: IconProps) => {
 		setFocus: state.setFocus,
 	}));
 
+	const isSmallScreen = window.innerWidth > 600 ? false : true;
+
 	const newWindow: WindowProps = {
 		name: label,
 		icon: img,
@@ -31,24 +33,45 @@ const Icon = (props: IconProps) => {
 	};
 
 	return (
-		<Draggable>
-			<div
-				className="icon box"
-				title="Double Click to open"
-				onDoubleClick={() => {
-					createProcess(newWindow);
-					setFocus(newWindow.id);
-					ReactGA.event({
-						category: label,
-						action: `click on ${label}`,
-						label: "Icon click",
-						value: 1,
-					});
-				}}>
-				<img src={img} alt={`${img} logo`} unselectable="on" />
-				<p className={`text-${variant}`}>{label}</p>
-			</div>
-		</Draggable>
+		<>
+			{!isSmallScreen ? (
+				<Draggable>
+					<div
+						className="icon box"
+						title="Double Click to open"
+						onDoubleClick={() => {
+							createProcess(newWindow);
+							setFocus(newWindow.id);
+							ReactGA.event({
+								category: label,
+								action: `click on ${label}`,
+								label: "Icon click",
+								value: 1,
+							});
+						}}>
+						<img src={img} alt={`${img} logo`} unselectable="on" />
+						<p className={`text-${variant}`}>{label}</p>
+					</div>
+				</Draggable>
+			) : (
+				<div
+					className="icon box"
+					title="Tap to open"
+					onClick={() => {
+						createProcess(newWindow);
+						setFocus(newWindow.id);
+						ReactGA.event({
+							category: label,
+							action: `click on ${label}`,
+							label: "Icon click",
+							value: 1,
+						});
+					}}>
+					<img src={img} alt={`${img} logo`} unselectable="on" />
+					<p className={`text-${variant}`}>{label}</p>
+				</div>
+			)}
+		</>
 	);
 };
 
