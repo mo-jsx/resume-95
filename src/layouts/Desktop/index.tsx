@@ -1,3 +1,6 @@
+// MODULES
+import cuid from "cuid";
+
 // STORE
 import ProcessManager from "../../store";
 
@@ -15,13 +18,18 @@ import {
 // ASSETS
 import { Bin, Computer, Dir, File, Me } from "../../assets/icons";
 import "./desktop.scss";
+import { useEffect, useState } from "react";
 
 const Desktop = () => {
-	const { processes, isStart, setIsStart } = ProcessManager((state) => ({
-		processes: state.openWindows,
-		isStart: state.isStart,
-		setIsStart: state.setIsStart,
-	}));
+	const [isRendered, setIsRendered] = useState(true);
+	const { processes, create, isStart, setIsStart } = ProcessManager(
+		(state) => ({
+			processes: state.openWindows,
+			create: state.createProcess,
+			isStart: state.isStart,
+			setIsStart: state.setIsStart,
+		})
+	);
 
 	const DeskIcons = [
 		{
@@ -55,6 +63,21 @@ const Desktop = () => {
 			children: <AboutMe />,
 		},
 	];
+
+	useEffect(() => {
+		if (isRendered) {
+			create({
+				name: "About me",
+				icon: Me,
+				id: cuid(),
+				isOpened: true,
+				isFocused: true,
+				isMinimized: false,
+				isMaximized: false,
+				children: <AboutMe />,
+			});
+		}
+	}, []);
 
 	return (
 		<div className="desktop">
