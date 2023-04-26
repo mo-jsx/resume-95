@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { WindowProps } from "types/";
 
 interface ProcessManagerProps {
+	// Process & Windows
 	openWindows: WindowProps[];
 
 	createProcess: (newWindow: WindowProps) => void;
@@ -10,6 +11,7 @@ interface ProcessManagerProps {
 	minimize: (id: string, newState: boolean) => void;
 	setFocus: (id: string) => void;
 
+	// Start Menu
 	isStart: boolean;
 	setIsStart: (state: boolean) => void;
 }
