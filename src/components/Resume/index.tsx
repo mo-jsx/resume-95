@@ -1,5 +1,5 @@
 import { Printer } from "../../assets/icons";
-import MyResume from "../../assets/data/Resume-1.png";
+import MyResume from "../../assets/data/Resume-1.webp";
 
 const Resume = () => {
 	return (

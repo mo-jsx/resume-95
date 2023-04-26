@@ -1,4 +1,4 @@
-import Pic from "../../assets/data/Pic.png";
+import Pic from "../../assets/data/Pic.webp";
 
 const tech = [
 	{
