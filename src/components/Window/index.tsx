@@ -12,7 +12,7 @@ import ProcessManager from "../../store";
 import { WindowProps } from "types/";
 
 // ASSETS
-import { Close, Maximize, Mini } from "../../assets/icons";
+import { Close, Maximize, Mini, Smaller } from "../../assets/icons";
 import "./fileManager.scss";
 
 interface ControlProps {
@@ -42,7 +42,7 @@ const Window = (props: WindowProps) => {
 			state: (id) => minimizeWindow(id, !isMinimized),
 		},
 		{
-			img: Maximize,
+			img: isMaximized ? Smaller : Maximize,
 			title: "Maximize window",
 			state: (id) => maximizeWindow(id, !isMaximized),
 		},
@@ -63,6 +63,7 @@ const Window = (props: WindowProps) => {
 					width: isMaximized ? "100%" : "",
 					height: isMaximized ? "100%" : "",
 					backgroundColor: isFocused ? "#c6c6c6" : "#eee",
+					position: "absolute",
 					top: isMaximized
 						? 0
 						: `${(Math.random() * 1000).toFixed()}`,

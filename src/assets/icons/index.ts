@@ -17,3 +17,4 @@ export { default as Me } from "./me.png";
 export { default as Win95 } from "./win95.png";
 export { default as Explorer } from "./explorer.png";
 export { default as Medium } from "./medium.png";
+export { default as Smaller } from "./smaller.png";
