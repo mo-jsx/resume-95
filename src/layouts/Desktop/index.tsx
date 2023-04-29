@@ -13,6 +13,7 @@ import {
 	Projects,
 	AboutMe,
 	Menu,
+	Games,
 } from "../../components";
 
 // ASSETS
@@ -61,6 +62,11 @@ const Desktop = () => {
 			label: "About me",
 			img: Me,
 			children: <AboutMe />,
+		},
+		{
+			label: "Games",
+			img: Dir,
+			children: <Games />,
 		},
 	];
 
