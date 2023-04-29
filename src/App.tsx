@@ -12,6 +12,11 @@ const App = () => {
 	useEffect(() => ReactGA.pageview(window.location.pathname), []);
 	return (
 		<div className="App">
+			<div
+				id="startup"
+				onAnimationEnd={() =>
+					(document.getElementById("startup")!.style.display = "none")
+				}></div>
 			<Desktop />
 			<Dock />
 		</div>
