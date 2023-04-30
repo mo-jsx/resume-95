@@ -22,7 +22,7 @@ const Projects = () => {
 				href="https://github.com/mo-jsx/toothist"
 				target="_blank"
 				title="A web app based MCQ platform">
-				<Icon label={"Larsson"} img={Toothist} variant={"black"} />
+				<Icon label={"Toothist"} img={Toothist} variant={"black"} />
 			</a>
 		</div>
 	);
