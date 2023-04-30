@@ -1,5 +1,6 @@
 import { Scooter } from "../../assets/icons/";
 import Icon from "../Icon";
+import Loading from "./Loading";
 import Vespa from "./Vespa";
 
 const Games = () => {

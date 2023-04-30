@@ -2,9 +2,9 @@ import Animation from "./Animation";
 
 const Loading = () => {
 	return (
-		<div>
+		<div style={{ position: "absolute", marginLeft: "25%" }}>
 			<Animation />
-			<h1>Loading</h1>
+			<h1 style={{ textAlign: "center" }}>Loading</h1>
 		</div>
 	);
 };
