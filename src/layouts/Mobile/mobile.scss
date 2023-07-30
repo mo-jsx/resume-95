@@ -1,0 +1,22 @@
+@use "../../styles/colors" as colors;
+@use "../../styles/viewport" as sizes;
+
+.mobile {
+    display: none;
+
+    @media screen and (max-width: sizes.$m) { 
+        display: block;
+        
+        position: absolute;
+        z-index: 1002;
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+        height: 100svh;
+        background-color: colors.$bg;
+
+        transform: translate(100%, 0%);
+    }
+}

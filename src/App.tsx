@@ -1,4 +1,4 @@
-import { Desktop, Dock } from "./layouts";
+import { Desktop, Dock, Mobile } from "./layouts";
 import ReactGA from "react-ga";
 
 import "./app.scss";
@@ -17,6 +17,7 @@ const App = () => {
 				onAnimationEnd={() =>
 					(document.getElementById("startup")!.style.display = "none")
 				}></div>
+				{/* <Mobile /> */}
 			<Desktop />
 			<Dock />
 		</div>
