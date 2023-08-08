@@ -1,5 +1,3 @@
-import Pic from "../../assets/data/Pic.webp";
-
 const tech = [
 	{
 		link: "https://react.dev",
@@ -39,7 +37,9 @@ const AboutMe = () => {
 			}}>
 			<h1>Hi there 👋 I'm Mo!</h1>
 			<img
-				src={Pic}
+				src={
+					"https://lh3.googleusercontent.com/drive-viewer/AITFw-zBLY98kY4h3Y6WVV6DSF8ZFNeO9wsONUG77CLGXZQtO-9gKPVYtyb4KztQ5-bfSc9O8hb2dIlc8SD2Rm8N7akGmrMjiQ=w1920-h944"
+				}
 				alt={"My profile pic"}
 				style={{
 					width: "120px",
