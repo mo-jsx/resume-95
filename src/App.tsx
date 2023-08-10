@@ -14,23 +14,24 @@ const App = () => {
 	const width = window.innerWidth;
 	console.log("Width: ", width);
 
-	if (width <= 756) {
-		return <Mobile />;
-	}
-	if (width > 756) {
-		return (
-			<div className="App">
-				<div
-					id="startup"
-					onAnimationEnd={() =>
-						(document.getElementById("startup")!.style.display =
-							"none")
-					}></div>
-				<Desktop />
-				<Dock />
-			</div>
-		);
-	}
+	return (
+		<>
+			{width <= 756 ? (
+				<Mobile />
+			) : (
+				<div className="App">
+					<div
+						id="startup"
+						onAnimationEnd={() =>
+							(document.getElementById("startup")!.style.display =
+								"none")
+						}></div>
+					<Desktop />
+					<Dock />
+				</div>
+			)}
+		</>
+	);
 };
 
 export default App;
