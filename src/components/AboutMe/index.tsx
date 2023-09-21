@@ -12,8 +12,8 @@ const tech = [
 		label: "Storybook",
 	},
 	{
-		link: "https://styled-components.com/",
-		label: "styled-components",
+		link: "https://vanilla-extract.style/",
+		label: "vanilla-extract",
 	},
 	{
 		link: "https://graphql.org/",
@@ -38,7 +38,7 @@ const AboutMe = () => {
 			<h1>Hi there 👋 I'm Mo!</h1>
 			<img
 				src={
-					"https://lh3.googleusercontent.com/drive-viewer/AITFw-zBLY98kY4h3Y6WVV6DSF8ZFNeO9wsONUG77CLGXZQtO-9gKPVYtyb4KztQ5-bfSc9O8hb2dIlc8SD2Rm8N7akGmrMjiQ=w1920-h944"
+					"https://gitlab.com/jinchu.riki/personal/-/raw/main/Pic.webp"
 				}
 				alt={"My profile pic"}
 				style={{
