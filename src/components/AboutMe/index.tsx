@@ -38,12 +38,12 @@ const AboutMe = () => {
 			<h1>Hi there 👋 I'm Mo!</h1>
 			<img
 				src={
-					"https://gitlab.com/jinchu.riki/personal/-/raw/main/Pic.webp"
+					"https://gitlab.com/mojsx.dev/personal/-/raw/main/pic.webp"
 				}
 				alt={"My profile pic"}
 				style={{
 					width: "120px",
-					height: "120px",
+					height: "160px",
 					backgroundColor: "black",
 				}}
 			/>
