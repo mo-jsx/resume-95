@@ -1,9 +1,15 @@
-import { Write, Larsson, Toothist } from "../../assets/icons";
+import { Write, Larsson, Toothist, Wojooh } from "../../assets/icons";
 import Icon from "../Icon";
 
 const Projects = () => {
 	return (
 		<div style={{ display: "flex", flexDirection: "row" }}>
+			<a
+				href="https://agence-wojooh.com/"
+				target="_blank"
+				title="A Digital Casting Agency">
+				<Icon label={"Wojooh Agency"} img={Wojooh} variant={"black"} />
+			</a>
 			<a
 				href="https://github.com/mo-jsx/rezumee"
 				target="_blank"

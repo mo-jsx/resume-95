@@ -19,4 +19,5 @@ export { default as Explorer } from "./explorer.png";
 export { default as Medium } from "./medium.png";
 export { default as Smaller } from "./smaller.png";
 export { default as Scooter } from "./scooter.png";
+export { default as Wojooh } from "./wojooh.png";
 export { default as LoadingDots } from "./dots-loading.json";
