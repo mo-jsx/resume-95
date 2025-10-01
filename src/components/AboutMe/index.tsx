@@ -53,9 +53,9 @@ const AboutMe = () => {
 					fontSize: "0.8rem",
 					lineHeight: "1.4rem",
 				}}>
-				<li>📍 Based in Algiers, Algeria.</li>
+				<li>📍 Based in Netherlands.</li>
 				<li>
-					👨‍💻 I specialise in design systems, performant frontend
+					👨‍💻 I specialise in user experiene, accessibility, performant frontend
 					applications, immersive web experience and managing
 					monorepos.
 				</li>
